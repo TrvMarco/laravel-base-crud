@@ -5,7 +5,16 @@
 @endsection
 
 @section('page-content')
-    <div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="col-12 pb-2 text-center">
+                    <a href="/" type="button" class="btn btn-danger">Home page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
         <form action="{{ route('comics.store')}}" method="post">
             @csrf
 

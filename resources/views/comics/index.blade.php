@@ -5,6 +5,15 @@
 @endsection
 
 @section('page-content')
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="col-12 pb-2 text-center">
+                    <a href="{{ route('comics.create')}}" type="button" class="btn btn-danger">Aggiungi un fumetto</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div>
         <table class="table">
             <thead>
