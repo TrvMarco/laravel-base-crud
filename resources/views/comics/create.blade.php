@@ -15,7 +15,8 @@
         </div>
     </div>
     <div class="container">
-        <form action="{{ route('comics.store')}}" method="post">
+        <h1>Aggiungi un fumetto</h1>
+        <form action="{{ route('comics.store')}}" method="post" class="d-flex flex-column align-items-start">
             @csrf
 
             <label for="title">Titolo:</label>
@@ -27,19 +28,19 @@
             <label for="thumb">thumb:</label>
             <input type="text" name="thumb" id="thumb">
 
-            <label for="price">price:</price>
-                <input type="number" id="price" name="price"></input>
+            <label for="price">price:</label>
+            <input type="number" id="price" name="price" step="any"></input>
 
-            <label for="series">series:</price>
+            <label for="series">series:</label>
             <input type="text" name="series" id="series">
 
-            <label for="sale_date">sale_date:</price>
+            <label for="sale_date">sale_date:</label>
             <input type="text" name="sale_date" id="sale_date">
 
-            <label for="type">type:</price>
+            <label for="type">type:</label>
             <input type="text" name="type" id="type">
 
-            <button type="submit">Invia!</button>
+            <button class="mt-3" type="submit">Invia!</button>
         </form>
 
     </div>
