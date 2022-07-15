@@ -16,14 +16,14 @@
     </div>
     <div class="container">
         <h1>Aggiungi un fumetto</h1>
-        <form action="{{ route('comics.store')}}" method="post" class="d-flex flex-column align-items-start">
+        <form action="{{ route('comics.store')}}" method="post" class="d-flex flex-column" style="width: 50%">
             @csrf
 
             <label for="title">Titolo:</label>
             <input type="text" name="title" id="title">
 
             <label for="description">description:</label>
-            <input type="text-area" name="description" id="description">
+            <textarea type="text" name="description" id="description"></textarea>
 
             <label for="thumb">thumb:</label>
             <input type="text" name="thumb" id="thumb">
@@ -35,7 +35,7 @@
             <input type="text" name="series" id="series">
 
             <label for="sale_date">sale_date:</label>
-            <input type="text" name="sale_date" id="sale_date">
+            <input type="date" name="sale_date" id="sale_date">
 
             <label for="type">type:</label>
             <input type="text" name="type" id="type">

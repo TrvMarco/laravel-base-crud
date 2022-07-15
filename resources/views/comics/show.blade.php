@@ -17,6 +17,7 @@
                 <div><small>{{$comic->sale_date}}</small></div>
                 <div><small>Tipologia: {{$comic->type}}</small></div>
             </div>
+            <div class="col-1"><a href="{{ route('comics.index') }}" type="button" class="btn btn-info mb-2">Indietro</a></div>
         </div>
     </div>
 @endsection

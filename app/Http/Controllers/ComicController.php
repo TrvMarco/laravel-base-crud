@@ -38,6 +38,7 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         Comic::create($request->all());
+
         return redirect()->route('comics.index');
     }
 
@@ -82,8 +83,9 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Comic $comic)
     {
-        //
+        $comic->delete();
+        return redirect()->route('comics.index');
     }
 }

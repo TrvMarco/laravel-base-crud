@@ -16,7 +16,7 @@
     </div>
     <div class="container">
         <h1>Modifica un fumetto</h1>
-        <form action="{{ route('comics.update', $comic->id )}}" method="post" class="d-flex flex-column align-items-start">
+        <form action="{{ route('comics.update', $comic->id )}}" method="post" class="d-flex flex-column" style="width: 50%;">
             @csrf
             @method('PUT')
 
@@ -24,22 +24,22 @@
             <input type="text" name="title" id="title" value="{{$comic->title}}">
 
             <label for="description">description:</label>
-            <input type="text-area" name="description" id="description" value="{{$comic->description}}>
+            <textarea rows="7" type="text-area" name="description" id="description">{{$comic->description}}</textarea>
 
             <label for="thumb">thumb:</label>
-            <input type="text" name="thumb" id="thumb" value="{{$comic->thumb}}>
+            <input type="text" name="thumb" id="thumb" value="{{$comic->thumb}}">
 
             <label for="price">price:</label>
-            <input type="number" id="price" name="price" step="any" value="{{$comic->price}}></input>
+            <input type="number" id="price" name="price" step="any" value="{{$comic->price}}"></input>
 
             <label for="series">series:</label>
-            <input type="text" name="series" id="series" value="{{$comic->series}}>
+            <input type="text" name="series" id="series" value="{{$comic->series}}">
 
             <label for="sale_date">sale_date:</label>
-            <input type="text" name="sale_date" id="sale_date" value="{{$comic->sale_date}}>
+            <input type="date" name="sale_date" id="sale_date" value="{{$comic->sale_date}}">
 
             <label for="type">type:</label>
-            <input type="text" name="type" id="type" value="{{$comic->type}}>
+            <input type="text" name="type" id="type" value="{{$comic->type}}">
 
             <button class="mt-3" type="submit">Invia!</button>
         </form>
